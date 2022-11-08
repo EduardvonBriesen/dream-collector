@@ -16,4 +16,10 @@
   {% if result %}
   <div class="result">{{ result }}</div>
   {% endif %}
+  {% if dream_list %}
+  <h4>Previous dreams</h4>
+  {% for dream in dream_list %}
+  <p>"{{ dream }}"</p>
+  {% endfor %}
+  {% endif %}
 </body>
