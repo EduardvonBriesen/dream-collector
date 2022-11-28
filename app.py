@@ -26,6 +26,15 @@ def index():
 
 
 def generate_prompt():
-    return """Generate a text-to-image prompt from the following dreams: {}""".format(
+
+    # open text file in read mode
+    text_file = open("example_prompts.txt", "r")
+    example_prompts = text_file.read()
+    text_file.close()
+
+    return """Example Prompts: \n {} \n Generate Prompt a new prompt with the phrases {}""".format(
+        example_prompts,
         dream_list
     )
+
+
