@@ -29,11 +29,9 @@ def generate_prompt():
 
     # open text file in read mode
     text_file = open("example_prompts.txt", "r")
-    example_prompts = text_file.read()
     text_file.close()
 
-    return """Example Prompts: \n {} \n Generate Prompt a new prompt with the phrases {}""".format(
-        example_prompts,
+    return """Generate a new prompt with the phrases {}""".format(
         dream_list
     )
 
